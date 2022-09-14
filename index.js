@@ -35,7 +35,7 @@ searchCity.addEventListener('keydown', function(event){
             weatherCity.innerHTML = data.name;
             weatherIcon.innerHTML = data.weather[0]['description']
         }catch(err){
-            alert("ошибочка");
+            console.log("ошибочка");
         };
     }
     
