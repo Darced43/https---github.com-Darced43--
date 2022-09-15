@@ -40,7 +40,23 @@ searchCity.addEventListener('keydown', event => {
     if(event.code == 'Enter'){
         cityEnter = searchCity.value
         console.log(cityEnter)
+<<<<<<< HEAD
         searchCity.value = ''
+=======
+        this.value = ''
+    }
+    async function weather (){
+        try{
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityEnter}&appid=8863aa32b8dc6777a27722522c3c0462&units=metric`);
+            const data = await response.json();
+            console.log(data)
+            weatherTemp.innerHTML = parseInt(data.main.temp) + "°";
+            weatherCity.innerHTML = data.name;
+            weatherIcon.innerHTML = data.weather[0]['description']
+        }catch(err){
+            console.log("ошибочка");
+        };
+>>>>>>> 4abde193717df15ee85618941480777f3fb53763
     }
     fetchWeatherInfo ()
 })
