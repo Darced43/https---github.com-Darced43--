@@ -14,3 +14,13 @@ body{
 .search{
   width: 100%;
 }
+
+.forecast{
+  width: auto;
+  height: 600px;
+}
+
+.forecast p{
+  margin: 0;
+  margin-bottom: 10px;
+}
