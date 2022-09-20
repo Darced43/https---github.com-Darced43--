@@ -6,21 +6,45 @@ body{
   align-items: center;
 }
 
-.body{
+.body__info{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
   width: 600px;
-  height: 600px;
+  border: 1px solid rgb(112, 112, 112);
 }
 
 .search{
   width: 100%;
 }
+.weather_city{
+  display: flex;
+}
+.city{
+  font-size: 22px;
+}
+#like{
+  padding: 4px;
+  cursor: pointer;
+}
+
 
 .forecast{
+  padding: 10px;
   width: auto;
-  height: 600px;
+  height: 200px;
+  border: 1px solid rgb(112, 112, 112);
 }
 
 .forecast p{
   margin: 0;
   margin-bottom: 10px;
+}
+
+.likeCyti__choice-city{
+  cursor: pointer;
+}
+.choice-city-close{
+  margin-left: 10px;
+  cursor: pointer;
 }
