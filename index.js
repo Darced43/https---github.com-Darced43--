@@ -121,8 +121,9 @@ function youLikes (LastDataName) {
     let likeCytiChoiceCity = document.querySelectorAll('.likeCyti__choice-city')
     localStorage.setItem(LastDataName, LastDataName);
     saveLocal()
+
     let choiceCityClose = document.querySelectorAll('.choice-city-close');
-choiceCityClose.forEach((item) => {
+    choiceCityClose.forEach((item) => {
     item.addEventListener('click', (event) => {
         let nameCity = item.previousSibling.textContent;
         localStorage.removeItem(nameCity)
@@ -150,6 +151,16 @@ function saveLocal(){
     let storageMas = JSON.parse(localStorage.getItem('keysName'))
     masResult = storageMas;
     console.log(masResult);
+
+    let likeCytiChoiceCity = document.querySelectorAll('.likeCyti__choice-city')
+likeCytiChoiceCity.forEach((item) => {
+    item.addEventListener('click', (event) => {
+        let nameCyti = item.firstChild.textContent;
+        cityEnter = nameCyti
+        console.log(nameCyti)
+        fetchWeatherInfo ()
+    })
+})
 }
 
 let likeCytiChoiceCity = document.querySelectorAll('.likeCyti__choice-city')
